@@ -29,9 +29,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     const savedCart = localStorage.getItem("cartItems");
     if (savedCart) {
       try {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCartItems(JSON.parse(savedCart));
       } catch (e) {
-        console.error("Failed to parse cart items from local storage");
+        console.error("Failed to parse cart items from local storage", e);
       }
     }
   }, []);

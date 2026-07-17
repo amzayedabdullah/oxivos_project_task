@@ -4,7 +4,7 @@ import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
-import { Filter, ChevronDown, Search } from "lucide-react";
+import { Filter, ChevronDown } from "lucide-react";
 
 function ProductsContent() {
   const searchParams = useSearchParams();

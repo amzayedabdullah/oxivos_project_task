@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, use } from "react";
+import Image from 'next/image';
 import { products } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 import { notFound } from "next/navigation";
@@ -44,10 +45,11 @@ export default function ProductDetailsPage({ params }: { params: Promise<{ id: s
           
           <div className="w-full lg:w-1/2">
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-50 border border-slate-100">
-              <img 
+              <Image 
                 src={product.image} 
                 alt={product.name}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
               {!product.inStock && (
                 <div className="absolute top-6 right-6">

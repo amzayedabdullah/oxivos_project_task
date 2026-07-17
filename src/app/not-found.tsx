@@ -13,7 +13,7 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-slate-500 mb-8 max-w-sm text-sm sm:text-base">
-            The page you're looking for seems to have vanished. Let's get you back on track.
+            The page you&apos;re looking for seems to have vanished. Let&apos;s get you back on track.
           </p>
           <Link 
             href="/"

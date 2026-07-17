@@ -19,7 +19,7 @@ export default function CartPage() {
         </div>
         <h1 className="text-3xl font-black text-slate-900 tracking-tight mb-3">Your cart is empty</h1>
         <p className="text-slate-500 mb-8 max-w-md text-center">
-          Looks like you haven't added anything to your cart yet. Discover our premium collection and elevate your style.
+          Looks like you haven&apos;t added anything to your cart yet. Discover our premium collection and elevate your style.
         </p>
         <Link 
           href="/products" 

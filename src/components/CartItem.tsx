@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { CartItemType, useCart } from '@/context/CartContext';
 import { Minus, Plus, Trash2 } from 'lucide-react';
 import Link from 'next/link';
@@ -10,10 +11,11 @@ export default function CartItem({ item }: { item: CartItemType }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 py-6 border-b border-slate-100 last:border-0 group">
       <Link href={`/products/${product.id}`} className="shrink-0 relative w-24 h-24 sm:w-32 sm:h-32 rounded-xl overflow-hidden bg-slate-50 border border-slate-100">
-        <img 
+        <Image 
           src={product.image} 
           alt={product.name} 
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </Link>
 

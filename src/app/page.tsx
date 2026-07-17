@@ -6,16 +6,16 @@ import { ArrowRight, Truck, ShieldCheck, Clock } from "lucide-react";
 
 export default function Home() {
   const featuredProducts = products.slice(0, 4);
-  const newArrivals = products.slice(4, 8);
-
   return (
     <div className="flex flex-col min-h-screen">
       <section className="relative h-[80vh] min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/images/hero.png"
             alt="Hero Background"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-[2px]"></div>
         </div>
@@ -65,7 +65,7 @@ export default function Home() {
                 <Clock size={32} />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Easy Exchange Policy</h3>
-              <p className="text-slate-500 text-sm">Size doesn't fit? We offer an easy 7-day exchange policy for all items.</p>
+              <p className="text-slate-500 text-sm">Size doesn&apos;t fit? We offer an easy 7-day exchange policy for all items.</p>
             </div>
           </div>
         </div>
@@ -99,10 +99,11 @@ export default function Home() {
 
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/images/promo.png"
             alt="Promo Background"
-            className="w-full h-full object-cover object-center"
+            fill
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px]"></div>
         </div>

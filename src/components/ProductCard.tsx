@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/data/products';
 import { ShoppingBag, Star } from 'lucide-react';
@@ -38,10 +39,11 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link href={`/products/${product.id}`} className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
       <div className="relative aspect-[4/5] overflow-hidden bg-slate-50">
-        <img
+        <Image
           src={product.image}
           alt={product.name}
-          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
         {!product.inStock && (
           <div className="absolute inset-0 bg-white/60 backdrop-blur-sm flex items-center justify-center">

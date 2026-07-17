@@ -6,7 +6,7 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Contact Us</h1>
-          <p className="text-lg text-slate-600">We'd love to hear from you. Whether you have a question about our collections, need help with sizing, or want to partner with us, our team is ready to answer all your questions.</p>
+          <p className="text-lg text-slate-600">We&apos;d love to hear from you. Whether you have a question about our collections, need help with sizing, or want to partner with us, our team is ready to answer all your questions.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

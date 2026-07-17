@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight, Star, Shield, Leaf, Heart } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -11,7 +12,7 @@ export default function AboutPage() {
               Redefining <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Bangladeshi Fashion.</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-8">
-              OXIVOS was born from a simple desire: to create premium, culturally authentic menswear that doesn't compromise on modern aesthetics, quality, or comfort. We blend traditional craftsmanship with contemporary design.
+              OXIVOS was born from a simple desire: to create premium, culturally authentic menswear that doesn&apos;t compromise on modern aesthetics, quality, or comfort. We blend traditional craftsmanship with contemporary design.
             </p>
           </div>
         </div>
@@ -23,11 +24,14 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <img 
-                src="/images/1.jpg" 
-                alt="Our craftsmanship" 
-                className="w-full rounded-2xl shadow-2xl object-cover h-[500px]"
-              />
+              <div className="w-full relative h-[500px]">
+                <Image 
+                  src="/images/1.jpg" 
+                  alt="Our craftsmanship" 
+                  fill
+                  className="rounded-2xl shadow-2xl object-cover"
+                />
+              </div>
             </div>
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6 tracking-tight">Our Story</h2>
